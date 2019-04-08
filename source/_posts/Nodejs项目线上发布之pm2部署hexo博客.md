@@ -164,3 +164,9 @@ sudo chmod 777 blog // pm2通过ssh，需要访问这个文件夹，这里先把
 ```shell
 pm2 deploy ecosystem.json production setup
 ```
+这时在服务器端`/www/blog/production`就能找到拉取到的代码
+### 更新代码
+在本地`git push`上传到github，然后执行
+```shell
+pm2 deploy production update
+```
