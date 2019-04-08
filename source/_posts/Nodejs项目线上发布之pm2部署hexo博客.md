@@ -58,7 +58,7 @@ cnpm -v
 
 ## 全局安装常用的工具包
 ```
-npm i pm2 webpack gulp grunt-cli
+npm i pm2 webpack gulp grunt-cli hexo-cli
 ```
 
 ## 测试nodejs环境
