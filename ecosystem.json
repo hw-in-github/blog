@@ -19,7 +19,7 @@
             "ref": "origin/master",
             "repo": "https://github.com/hw-in-github/blog.git",
             "path": "/www/blog/production",
-            "post-deploy":"npm install && hexo clean && hexo g && pm2 startOrRestart ecosystem.json --env production",
+            "post-deploy":"npm install -f && hexo clean && hexo g && pm2 startOrRestart ecosystem.json --env production",
             "ssh_options": "StrictHostKeyChecking=no",
             "env": {
                 "NODE_ENV": "production"
