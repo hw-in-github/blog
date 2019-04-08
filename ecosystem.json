@@ -1,0 +1,29 @@
+{
+    "apps": [
+        {
+            "name": "blog",
+            "script": "hexo server -p 8081",
+            "env": {
+                "COMMON_VARIABLE": "true"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        }
+    ],
+    "deploy": {
+        "production": {
+            "user": "root",
+            "host": ["107.151.139.139"],
+            "port": "26434",
+            "ref": "origin/master",
+            "repo": "https://github.com/hw-in-github/blog.git",
+            "path": "www/blog/production",
+            "post-deploy":"npm install && hexo clean && hexo g && pm2 startOrRestart ecosystem.json --env production",
+            "ssh_options": "StrictHostKeyChecking=no",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }
+    }
+  }
