@@ -122,7 +122,7 @@ git push -u origin master
 ## 部署项目
 ### pm2配置文件
 在项目里新建一个`ecosystem.json`
-```
+```json
 {
   "apps": [
     {
@@ -142,7 +142,7 @@ git push -u origin master
         "port": "26434",
         "ref": "origin/master",
         "repo": "https://github.com/hw-in-github/blog.git",
-        "path": "www/blog/production",
+        "path": "/www/blog/production",
         "ssh_options": "StrictHostKeyChecking=no",
         "env": {
           "NODE_ENV": "production"

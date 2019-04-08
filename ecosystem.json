@@ -18,7 +18,7 @@
             "port": "26434",
             "ref": "origin/master",
             "repo": "https://github.com/hw-in-github/blog.git",
-            "path": "www/blog/production",
+            "path": "/www/blog/production",
             "post-deploy":"npm install && hexo clean && hexo g && pm2 startOrRestart ecosystem.json --env production",
             "ssh_options": "StrictHostKeyChecking=no",
             "env": {
