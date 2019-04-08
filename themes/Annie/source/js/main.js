@@ -219,8 +219,14 @@ jQuery(document).ready(function($) {
 
 			scrollPercent = scrollPercent.toFixed(1);
 
-			if(scrollPercent > 100 || scrollPercent < 0) {
+			// if(scrollPercent > 100 || scrollPercent < 0) {
+			// 	scrollPercent = 100;
+			// }
+			if(scrollPercent >= 100) {
 				scrollPercent = 100;
+			}
+			if(scrollPercent <= 0) {
+				scrollPercent = 0;
 			}
 
 			$('#progress-percentage h1').text(scrollPercent + "%");
@@ -261,7 +267,7 @@ jQuery(document).ready(function($) {
 				//屏幕宽度<=1024px时应隐藏
 				$(postTocId).css('position', 'fixed').show().fadeIn(delayTimeG);
 			} else {
-				$(postTocId).hide().fadeOut(delayTimeG);
+				// $(postTocId).hide().fadeOut(delayTimeG);
 			}
 		});
 
