@@ -1,0 +1,21 @@
+<% 
+	const indexStyle = theme.index_style;
+%>
+
+<%- partial('_partial/header',{cache: true}) %>
+<% if(indexStyle === 'pure'){ %>
+
+	<!--pure style-->
+	<%- partial('_partial/index-pure') %>
+
+<% } else if(indexStyle === 'cart'){ %>
+
+	<!--cart style-->
+	<%- partial('_partial/index-cart') %>
+	
+<% } else { %>
+
+	<!--default style-->
+	<%- partial('_partial/index-pure') %>
+	
+<% } %>
