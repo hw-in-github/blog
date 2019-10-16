@@ -15,7 +15,7 @@
         "production": {
             "user": "root",
             "host": ["172.247.32.40"],
-            "port": "26434",
+            "port": "29915",
             "ref": "origin/master",
             "repo": "https://github.com/hw-in-github/blog.git",
             "path": "/www/blog/production",
